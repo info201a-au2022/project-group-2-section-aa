@@ -28,6 +28,7 @@ source("../source/chart-2_code.R")
 source("../source/table.R")
 #data_access_test()
 new_data
+bar_graph
 ```
 
 ### Example 2: Initialize a variable and then use it
@@ -63,6 +64,6 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 We made a scatterplot to analyze the correlation between the overall score and price on booking.com website. However, we omitted some observations that contain missing values. As a result, in this scatterplot, we can detect a positive correlation between the overall score and the price. This result answers one of the research questions we created on the project proposal.
 
 ### Chart 2 Descriptive paragraph
-
+This is a bar graph that shows the top 15 hotels that got the most reviews from booking.com. However, in our code, there are some issues that there are some hotels who receive a few reviews but are shown in the bar graph. (to be fixed) In this visulization, we want to focus on the hotels thet get most reviews and compared them with more detailed variables such as location, cleanliness, facilities, and more in our future report. 
 
 ### Chart 1 Descriptive paragraph
