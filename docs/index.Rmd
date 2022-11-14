@@ -28,8 +28,6 @@ source("../source/chart-2_code.R")
 source("../source/table.R")
 #data_access_test()
 new_data
-overall_price_corr
-bar_graph
 ```
 
 ### Example 2: Initialize a variable and then use it
@@ -54,8 +52,10 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r overall_price_corr, echo=FALSE}
+#plot(pressure)
+overall_price_corr
+bar_graph
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
