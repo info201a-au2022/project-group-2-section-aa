@@ -8,13 +8,14 @@ library("tidyverse")
 library("ggplot2")
 
 new_data <- review_from_booking %>%
+  filter(Number.of.reviewers > 100) %>%
   group_by(name)%>%
   summarise(number_of_reviewers = max(Number.of.reviewers, na.rm= TRUE)) %>%
   arrange(desc(number_of_reviewers)) %>%
-  slice(1:20)
+  slice(1:15)
 
 View(new_data)
 
-barchart <- ggplot(new_data, aes(x= name, y=number_of_reviewers)) +
-  geom_bar(stat = "identity")
+
+
 
