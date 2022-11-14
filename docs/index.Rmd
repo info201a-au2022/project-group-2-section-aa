@@ -22,6 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # directory(..), down into source (/source), and 
 # then "source" an R file (data_access.R)
 source("../source/data_access.R")
+source("../source/chart-1_code.R")
 data_access_test()
 ```
 
@@ -52,3 +53,12 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Charts Summary
+### Chart 1 Descriptive paragraph
+We made a scatterplot to analyze the correlation between the overall score and price on booking.com website. However, we omitted some observations that contain missing values. As a result, in this scatterplot, we can detect a positive correlation between the overall score and the price. This result answers one of the research questions we created on the project proposal.
+
+### Chart 2 Descriptive paragraph
+
+
+### Chart 1 Descriptive paragraph
