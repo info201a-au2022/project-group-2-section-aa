@@ -375,8 +375,40 @@ write rmarkdown to report your exploratory data analysis.</p></li>
 # directory(..), down into source (/source), and 
 # then &quot;source&quot; an R file (data_access.R)
 source(&quot;../source/data_access.R&quot;)
-data_access_test()</code></pre>
-<pre><code>## [1] &quot;Hello: World!&quot;</code></pre>
+source(&quot;../source/table.R&quot;)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+## ✔ ggplot2 3.3.6      ✔ purrr   0.3.5 
+## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
+## ✔ tidyr   1.2.1      ✔ stringr 1.4.1 
+## ✔ readr   2.1.3      ✔ forcats 0.5.2 
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>#data_access_test()
+new_data</code></pre>
+<pre><code>## # A tibble: 20 × 2
+##    name                                                      number_of_reviewers
+##    &lt;chr&gt;                                                     &lt;chr&gt;              
+##  1 Best Western Hollywood Plaza Inn                          999                
+##  2 Hollywood 2Bed 2Bath                                      99                 
+##  3 Mosaic Hotel                                              98                 
+##  4 The Ritz-Carlton, Los Angeles L.A. Live                   98                 
+##  5 Renaissance Los Angeles Airport Hotel                     964                
+##  6 Ginosi Metropolitan Apartel                               96                 
+##  7 Holiday Inn Express West Los Angeles                      96                 
+##  8 BLVD Hotel &amp; Spa                                          956                
+##  9 Loews Santa Monica Beach Hotel                            950                
+## 10 O Hotel                                                   934                
+## 11 Hotel Bel-Air                                             93                 
+## 12 Boutique Hollywood                                        92                 
+## 13 Ace Hotel Downtown Los Angeles                            917                
+## 14 The Kinney - Venice Beach                                 915                
+## 15 Downtown LA 5bed Royal Penthouse                          9                  
+## 16 Downtown LA Modern Home Staples Center                    9                  
+## 17 Downtown LA VIP Resort Apartment                          9                  
+## 18 Downtown Los Angeles 5bed Splendid                        9                  
+## 19 East West Comfort: Downtown LA Artistic Apartments        9                  
+## 20 EXQUISITE MARINA 2BDR SUITE WITH BALCONY &amp; RELAXING VIEWS 9</code></pre>
 </div>
 <div id="example-2-initialize-a-variable-and-then-use-it" class="section level3">
 <h3>Example 2: Initialize a variable and then use it</h3>
