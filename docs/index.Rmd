@@ -22,7 +22,9 @@ knitr::opts_chunk$set(echo = TRUE)
 # directory(..), down into source (/source), and 
 # then "source" an R file (data_access.R)
 source("../source/data_access.R")
-data_access_test()
+source("../source/table.R")
+#data_access_test()
+new_data
 ```
 
 ### Example 2: Initialize a variable and then use it
