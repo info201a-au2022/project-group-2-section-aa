@@ -8,7 +8,7 @@ library("tidyverse")
 library("ggplot2")
 
 new_data <- review_from_booking %>%
-  filter(Number.of.reviewers > 100) %>%
+  filter(Number.of.reviewers >= 100) %>%
   group_by(name)%>%
   summarise(number_of_reviewers = max(Number.of.reviewers, na.rm= TRUE)) %>%
   arrange(desc(number_of_reviewers)) %>%
