@@ -46,6 +46,7 @@ summary(review_from_booking)
 #plot(pressure)
 overall_price_corr
 bar_graph
+pie_chart
 ```
 
 ### Charts Summary
@@ -56,6 +57,6 @@ We made a scatterplot to analyze the correlation between the overall score and p
 This is a bar graph that shows the top 15 hotels that got the most reviews from booking.com. However, in our code, there are some issues that there are some hotels who receive a few reviews but are shown in the bar graph. (to be fixed) In this visualization, we want to focus on the hotels that get most reviews and compared them with more detailed variables such as location, cleanliness, facilities, and more in our future report. 
 
 #### Chart 3 Descriptive paragraph
-
-
+This pie chart displays the percentage each rating holds in the Trip Advisor Hotel Reviews dataset. By aggregating the data and calculating the percentage of 1, 2, 3, 4, and 5-star ratings, we were able to display it in a pie chart that is labeled with each respective percentage. This is helpful in helping us
+generalize the data and analyze and compare the largest and smallest groups. 
 
