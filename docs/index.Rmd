@@ -56,8 +56,6 @@ summary(review_from_booking)
 
 ## Three Charts
 
-You can also embed plots, for example:
-
 ```{r overall_price_corr, echo=FALSE}
 #plot(pressure)
 overall_price_corr
@@ -74,3 +72,6 @@ We made a scatterplot to analyze the correlation between the overall score and p
 This is a bar graph that shows the top 15 hotels that got the most reviews from booking.com. However, in our code, there are some issues that there are some hotels who receive a few reviews but are shown in the bar graph. (to be fixed) In this visulization, we want to focus on the hotels thet get most reviews and compared them with more detailed variables such as location, cleanliness, facilities, and more in our future report. 
 
 ### Chart 3 Descriptive paragraph
+
+
+
