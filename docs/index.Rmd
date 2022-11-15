@@ -26,16 +26,17 @@ source("../source/chart-1_code.R")
 source("../source/chart-2_code.R")
 #data_access_test()
 source("../source/table.R")
+source("../source/summary_info.R")
 #data_access_test()
 ```
 
 ### Dynamic Paragraph
 ```{r}
 # Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
+summary_info
+#msg <- data_access_test(" Morgan!")
 ```
-
-> `r msg` Hope you have a good day!! 
+In this analysis, we are using the data to detect the relationship among various factors in the largest dataset of our project, which includes overall score, cleanliness, value for money, and etc. For example, we found out that the maximum result of the review is a hotel named "Best Western Hollywood Plaza Inn." On the other hand, two of the highest overall reviews are hotels named "Selby Ave Guest House" and "Double Suite in Santa Monica" with the score of 10/10. The correlation between the overall score and cleanliness is significant that we discovered that the cleanest hotels also include these two hotels.
 
 ## Table
 ```{r}
@@ -64,14 +65,14 @@ bar_graph
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-## Charts Summary
-### Chart 1 Descriptive paragraph
+### Charts Summary
+#### Chart 1 Descriptive paragraph
 We made a scatterplot to analyze the correlation between the overall score and price on booking.com website. However, we omitted some observations that contain missing values. As a result, in this scatterplot, we can detect a positive correlation between the overall score and the price. This result answers one of the research questions we created on the project proposal.
 
-### Chart 2 Descriptive paragraph
-This is a bar graph that shows the top 15 hotels that got the most reviews from booking.com. However, in our code, there are some issues that there are some hotels who receive a few reviews but are shown in the bar graph. (to be fixed) In this visulization, we want to focus on the hotels thet get most reviews and compared them with more detailed variables such as location, cleanliness, facilities, and more in our future report. 
+#### Chart 2 Descriptive paragraph
+This is a bar graph that shows the top 15 hotels that got the most reviews from booking.com. However, in our code, there are some issues that there are some hotels who receive a few reviews but are shown in the bar graph. (to be fixed) In this visualization, we want to focus on the hotels that get most reviews and compared them with more detailed variables such as location, cleanliness, facilities, and more in our future report. 
 
-### Chart 3 Descriptive paragraph
+#### Chart 3 Descriptive paragraph
 
 
 
