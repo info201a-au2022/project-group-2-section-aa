@@ -9,14 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What is this file for?
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
-
-* Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
+### Source Information
 ```{r}
 # Example 1: Note relative path, which can be read: Up one
 # directory(..), down into source (/source), and 
@@ -24,19 +18,15 @@ knitr::opts_chunk$set(echo = TRUE)
 source("../source/data_access.R")
 source("../source/chart-1_code.R")
 source("../source/chart-2_code.R")
-#data_access_test()
 source("../source/table.R")
 source("../source/summary_info.R")
-#data_access_test()
 ```
 
 ### Dynamic Paragraph
 ```{r}
-# Example 1: This function was "sourced" above
 summary_info
-#msg <- data_access_test(" Morgan!")
 ```
-In this analysis, we are using the data to detect the relationship among various factors in the largest dataset of our project, which includes overall score, cleanliness, value for money, and etc. For example, we found out that the maximum result of the review is a hotel named "Best Western Hollywood Plaza Inn." On the other hand, two of the highest overall reviews are hotels named "Selby Ave Guest House" and "Double Suite in Santa Monica" with the score of 10/10. The correlation between the overall score and cleanliness is significant that we discovered that the cleanest hotels also include these two hotels.
+In this analysis, we are using the data to detect the relationship among various factors in the largest dataset of our project, which includes overall score, cleanliness, value for money, and etc. For example, we found out that the maximum result of the review is a hotel named "Best Western Hollywood Plaza Inn." On the other hand, two of the highest overall reviews are hotels named "Selby Ave Guest House" and "Double Suite in Santa Monica" with the score of 10/10. The correlation between the overall score and cleanliness is significant that we discovered that the cleanest hotels also include these two hotels. We found out that LA Deluxe Suite at The Grove Mall is the most worth price hotel among other hotels while Modern Star Apartments is the closest hotel to the center of the city. (0.6 miles from center) 
 
 ## Table
 ```{r}
@@ -45,11 +35,6 @@ new_data
 
 This table is a new data set that we filtered down the NA values in number_of reviewers, and we group by the name of the hotels to find the maximum number of reviewers in this new data. Finally, we select the top 15 hotels that have the most reveiws from booking.com
 
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r review_from_booking}
 summary(review_from_booking)
@@ -62,8 +47,6 @@ summary(review_from_booking)
 overall_price_corr
 bar_graph
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 ### Charts Summary
 #### Chart 1 Descriptive paragraph
