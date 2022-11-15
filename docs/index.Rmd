@@ -42,6 +42,7 @@ msg <- data_access_test(" Morgan!")
 new_data
 ```
 
+This table is a new data set that we filtered down the NA values in number_of reviewers, and we group by the name of the hotels to find the maximum number of reviewers in this new data. Finally, we select the top 15 hotels that have the most reveiws from booking.com
 
 ## ABOUT THIS FILE: 
 
