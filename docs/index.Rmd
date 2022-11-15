@@ -27,10 +27,9 @@ source("../source/chart-2_code.R")
 #data_access_test()
 source("../source/table.R")
 #data_access_test()
-new_data
 ```
 
-### Example 2: Initialize a variable and then use it
+### Dynamic Paragraph
 ```{r}
 # Example 1: This function was "sourced" above
 msg <- data_access_test(" Morgan!")
@@ -38,17 +37,23 @@ msg <- data_access_test(" Morgan!")
 
 > `r msg` Hope you have a good day!! 
 
+## Table
+```{r}
+new_data
+```
+
+
 ## ABOUT THIS FILE: 
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+```{r review_from_booking}
+summary(review_from_booking)
 ```
 
-## Including Plots
+## Three Charts
 
 You can also embed plots, for example:
 
