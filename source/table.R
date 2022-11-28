@@ -6,6 +6,7 @@ review_from_booking <- read.csv("https://raw.githubusercontent.com/info201a-au20
 
 library("tidyverse")
 library("ggplot2")
+library(knitr)
 
 new_data <- review_from_booking %>%
   filter(Number.of.reviewers >= 100) %>%
