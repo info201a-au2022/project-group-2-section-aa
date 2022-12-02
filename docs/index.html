@@ -423,25 +423,77 @@ hotel to the center of the city. (0.6 miles from center)</p>
 </div>
 <div id="table" class="section level2">
 <h2>Table</h2>
-<pre class="r"><code>new_data</code></pre>
-<pre><code>## # A tibble: 15 × 2
-##    name                                    number_of_reviewers
-##    &lt;chr&gt;                                   &lt;chr&gt;              
-##  1 Best Western Hollywood Plaza Inn        999                
-##  2 Hollywood 2Bed 2Bath                    99                 
-##  3 Mosaic Hotel                            98                 
-##  4 The Ritz-Carlton, Los Angeles L.A. Live 98                 
-##  5 Renaissance Los Angeles Airport Hotel   964                
-##  6 Ginosi Metropolitan Apartel             96                 
-##  7 Holiday Inn Express West Los Angeles    96                 
-##  8 BLVD Hotel &amp; Spa                        956                
-##  9 Loews Santa Monica Beach Hotel          950                
-## 10 O Hotel                                 934                
-## 11 Hotel Bel-Air                           93                 
-## 12 Boutique Hollywood                      92                 
-## 13 Ace Hotel Downtown Los Angeles          917                
-## 14 The Kinney - Venice Beach               915                
-## 15 Downtown LA 5bed Royal Penthouse        9</code></pre>
+<pre class="r"><code>kable(new_data)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="left">number_of_reviewers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Best Western Hollywood Plaza Inn</td>
+<td align="left">999</td>
+</tr>
+<tr class="even">
+<td align="left">Hollywood 2Bed 2Bath</td>
+<td align="left">99</td>
+</tr>
+<tr class="odd">
+<td align="left">Mosaic Hotel</td>
+<td align="left">98</td>
+</tr>
+<tr class="even">
+<td align="left">The Ritz-Carlton, Los Angeles L.A. Live</td>
+<td align="left">98</td>
+</tr>
+<tr class="odd">
+<td align="left">Renaissance Los Angeles Airport Hotel</td>
+<td align="left">964</td>
+</tr>
+<tr class="even">
+<td align="left">Ginosi Metropolitan Apartel</td>
+<td align="left">96</td>
+</tr>
+<tr class="odd">
+<td align="left">Holiday Inn Express West Los Angeles</td>
+<td align="left">96</td>
+</tr>
+<tr class="even">
+<td align="left">BLVD Hotel &amp; Spa</td>
+<td align="left">956</td>
+</tr>
+<tr class="odd">
+<td align="left">Loews Santa Monica Beach Hotel</td>
+<td align="left">950</td>
+</tr>
+<tr class="even">
+<td align="left">O Hotel</td>
+<td align="left">934</td>
+</tr>
+<tr class="odd">
+<td align="left">Hotel Bel-Air</td>
+<td align="left">93</td>
+</tr>
+<tr class="even">
+<td align="left">Boutique Hollywood</td>
+<td align="left">92</td>
+</tr>
+<tr class="odd">
+<td align="left">Ace Hotel Downtown Los Angeles</td>
+<td align="left">917</td>
+</tr>
+<tr class="even">
+<td align="left">The Kinney - Venice Beach</td>
+<td align="left">915</td>
+</tr>
+<tr class="odd">
+<td align="left">Downtown LA 5bed Royal Penthouse</td>
+<td align="left">9</td>
+</tr>
+</tbody>
+</table>
 <p>This table is a new data set that we filtered down the NA values in
 number_of reviewers, and we group by the name of the hotels to find the
 maximum number of reviewers in this new data. Finally, we select the top
