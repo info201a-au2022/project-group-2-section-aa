@@ -13,11 +13,51 @@ library(shiny)
 intro_panel <- tabPanel(
   "Introduction",
   
-  titlePanel("Introduction"),
-  
-  p(""),
-  
-  p('Click on the Widget tabs to see an interactive diagram')
+  fluidPage(
+    h1("3 Hotel Connoisseurs"),
+    br(), 
+    h3("Abstract:"),
+    p("Our motivation for this project is to effectively and efficiently analyze hotel reviews from different booking sites and conclude how they affect hotels' future bookings. 
+      This question is important because reviews not only play a big part in deciding where to stay on a trip, but they also directly impact the reputation and popularity of the hotel itself. 
+      Thus, hotel reviews are highly influential, as they concurrently impact both the customers and the company. 
+      To address this question, we will analyze several datasets and carefully examine the reviews, from the history of the reviews to the ratings themselves. 
+      We will analyze a variety of other factors that constitute the reviews, such as cleanliness, facilities, staff, and more. We are concerned with the accuracy of the data because there might be some biases or outliers in these datasets that we want to avoid. 
+      To address this concern, we plan on applying various sources in our analysis and comparing the results between datasets with outliers and those without."),
+    br(),
+    h3("Introduction:"),
+    p("When looking for a place to stay, people often pay attention to the hotel reviews left by previous guests on various booking platforms. 
+      These reviews not only allow people to gauge the quality of their stay, but they also prevent people from enduring unpleasant experiences. 
+      However, we often learn from the news that some reviews are inaccurate. Sometimes, we might be confused by extreme ratings and comments when reading through reviews. 
+      On the other hand, reviews are also another indicator of how well hotels are operating, which strongly influences the hotel’s reputation and popularity. 
+      As a result, we wanted to understand and analyze the accuracy of hotel reviews. In addition, we hope to discover different patterns of how highly-rated hotels operate their business. 
+      By avoiding misleading reviews and discovering patterns that successful businesses have in common, this will help us better understand the system and algorithms behind booking websites and the influence they have on the stakeholders of this project."),
+    br(),
+    h3("Research Questions:"),
+    strong("1. Is there a trend between overall hotel ratings and other rating factors (i.e. cleanliness, price)?"), 
+    p(""),
+    br(),
+    strong("2. Which locations do hotels have the highest reviews?"), 
+    p(""),
+    br(),
+    strong("3. What is the most frequent cause of good reviews?"),
+    p(""),
+    br(),
+    h3("Datasets:"), 
+    p("We collected three hotel review datasets from kaggle.com. 
+      These datasets contain information (e.g. city, country, comfort, cleanliness, staff, facilities, value for money, Wi-Fi, shuttle, and the number of reviewers) that help us analyze and address problems in our project."),
+    br(),
+    p("1. A list of hotel reviews from booking.com includes 1,003 observations and 49 variables."),
+    p("2. A list of hotel reviews from booking.com contains 20,491 observations and 2 variables."),
+    p("3. A list of hotel reviews consists of 1,000 observations and 19 variables."),
+    br(),
+    p("Datafiniti is the data collector of our first dataset. 
+      The purpose of the first dataset is to collect information on hotels in different cities in the U.S., which helps us evaluate the correlation between reviews and locations. 
+      Subsequently, the second dataset is collected by Larxel, which mostly is about reviews and ratings on tripadvisor.com. Finally, The Devastator collected the third dataset, which mainly focused on booking.com. 
+      This dataset will be our major focus in the project because it records many categories of data we need for our project. Investors and large companies funded the Kaggle website, and data are uploaded by individuals. 
+      People who are likely to benefit from the datasets are hotel managers because they have to refer to these reviews and comments in order to make improvements. 
+      In addition, people like us who want to use this information are also benefactors, which we are able to utilize the data and get our work done in this case. We found this data by looking at the suggestions on the project design brief file. 
+      We do credit the source of the data at the “Reference” section of the project.")
+  )
 )
 
 # Define a variable `inter_vis_i` for your first page. 
@@ -27,6 +67,7 @@ inter_vis_i <- tabPanel(
   titlePanel(""),
   
   p("")
+  
 )
 
 
@@ -53,7 +94,7 @@ inter_vis_iii <- tabPanel(
 summary_panel <- tabPanel(
   "Summary",
   
-  titlePanel("Summary"),
+  titlePanel("Summary Takeaways"),
   
   p(""),
   
