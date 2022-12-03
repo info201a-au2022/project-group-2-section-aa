@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 library(shiny)
 library(ggplot2)
 
@@ -8,7 +8,7 @@ review_from_1000 <- read.csv("https://raw.githubusercontent.com/info201a-au2022/
 review_from_booking <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotels%20Reviews%20(booking.com).csv")
 
 
-
+#inputs
 unique(review_from_1000$province)
 
 select_x_values <- colnames(review_from_booking)[c(-1,-2)]
@@ -45,70 +45,7 @@ size_input <- sliderInput(
   label = "Size of point", min = 1, max = 10, value = 5
 )
 
-
-
-intro_page <- tabPanel(
-  "Introduction", 
-  h1("Final Project"), 
-  p("In this assignment, we are fousing on hotel reviews")
-)
-
-second_page <- tabPanel(
-  "Factors of Hotels",
-  
-  # A `titlePanel()` with the text "Income growth 1980-2014"
-  titlePanel("Hotel Reviews Factors"),
-  
-  # A `sidebarLayout()` to create two columns.
-  # The sidebar layout will contain elements
-  
-  
-  x_input, 
-  
-  y_input,
-  
-  color_input,
-  
-  size_input, 
-  
-  # Plot the output with the name "scatter" (defined in `app_server.R`)
-  plotlyOutput("scatter")
-)
-
-third_page <- tabPanel(
-  "Zip Codes VS Hotels",
-  
-  # A `titlePanel()` with the text "Income growth 1980-2014"
-  titlePanel("Hotel Reviews"),
-  
-  # A `sidebarLayout()` to create two columns.
-  # The sidebar layout will contain elements:
-  sidebarLayout(
-    sidebarPanel(
-      uiOutput("selectZipCode")
-    ),
-    mainPanel(
-      plotlyOutput("zipcodePlot"),
-      textOutput("sampleText")
-    )
-  )
-)
-
-
-
-
-  
-  
-
-ui <- navbarPage(
-  "Hotels",
-  intro_page,
-  second_page,
-  third_page,
-)
-
-=======
-###SERVER
+#SERVER
 
 #packages
 library(dplyr)
@@ -173,24 +110,46 @@ intro_panel <- tabPanel(
 
 # Define a variable `inter_vis_i` for your first page. 
 inter_vis_i <- tabPanel(
-  "Interactive visualization",
+  "Factors of Hotels",
   
-  titlePanel(""),
+  # A `titlePanel()` with the text "Income growth 1980-2014"
+  titlePanel("Hotel Reviews Factors"),
   
-  p("")
+  # A `sidebarLayout()` to create two columns.
+  # The sidebar layout will contain elements
   
+  
+  x_input, 
+  
+  y_input,
+  
+  color_input,
+  
+  size_input, 
+  
+  # Plot the output with the name "scatter" (defined in `app_server.R`)
+  plotlyOutput("scatter")
 )
-
 
 # Define a variable `inter_vis_ii` for your first page. 
 inter_vis_ii <- tabPanel(
-  "Interactive visualization",
+  "Zip Codes VS Hotels",
   
-  titlePanel(""),
+  # A `titlePanel()` with the text "Income growth 1980-2014"
+  titlePanel("Hotel Reviews"),
   
-  p("")
+  # A `sidebarLayout()` to create two columns.
+  # The sidebar layout will contain elements:
+  sidebarLayout(
+    sidebarPanel(
+      uiOutput("selectZipCode")
+    ),
+    mainPanel(
+      plotlyOutput("zipcodePlot"),
+      textOutput("sampleText")
+    )
+  )
 )
-
 
 # Define a variable `inter_vis_iii` for your first page. 
 inter_vis_iii <- tabPanel(
@@ -233,4 +192,4 @@ ui <- navbarPage(
   summary_panel,
   report_panel
 )
->>>>>>> f8fd2c33aa01ec8122d88feb7b39f31bcda92dea
+
