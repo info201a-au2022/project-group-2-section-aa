@@ -8,7 +8,7 @@ review_from_1000 <- read.csv("https://raw.githubusercontent.com/info201a-au2022/
 review_from_booking <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotels%20Reviews%20(booking.com).csv")
 
 
-
+#inputs
 unique(review_from_1000$province)
 
 select_x_values <- colnames(review_from_booking)[c(-1,-2)]
@@ -108,7 +108,8 @@ ui <- navbarPage(
 )
 
 
-###SERVER
+#SERVER
+
 
 #packages
 library(dplyr)
@@ -143,18 +144,19 @@ intro_panel <- tabPanel(
       By avoiding misleading reviews and discovering patterns that successful businesses have in common, this will help us better understand the system and algorithms behind booking websites and the influence they have on the stakeholders of this project."),
     br(),
     h3("Research Questions:"),
-    strong("1. Is there a trend between overall hotel ratings and other rating factors (i.e. cleanliness, price)?"), 
-    p(""),
+    strong("1. Is there a trend between overall hotel ratings and other rating factors (i.e. cleanliness, price, etc.)?"), 
+    p("It's crucial that we analyze the correlations between overall hotel ratings and other rating factors. Not only will this reveal a possible pattern, but it will also help validate our findings and conclusion.
+      A positive correlation indicate the positive effect that a specific rating factor can influence overall ratings. On the other hand, a negative corrrelation shows that a specific rating factor can have a negative effect on the overall rating"),
     br(),
-    strong("2. Which locations do hotels have the highest reviews?"), 
-    p(""),
+    strong("2. What is the distributions of reviews across various areas?"), 
+    p("By posing this question, people who are looking for a stay are able to find the best area or location to book their stays. Moreover, by looking at the interactive visualization, we can detect the most frequent area for booking and further analyze factors to maintain high reviews."),
     br(),
     strong("3. What is the most frequent cause of good reviews?"),
     p(""),
     br(),
     h3("Datasets:"), 
     p("We collected three hotel review datasets from kaggle.com. 
-      These datasets contain information (e.g. city, country, comfort, cleanliness, staff, facilities, value for money, Wi-Fi, shuttle, and the number of reviewers) that help us analyze and address problems in our project."),
+      These datasets contain information (e.g. comfort, cleanliness, staff, facilities, value for money, Wi-Fi, shuttle, and the number of reviewers) that help us analyze and address problems in our project."),
     br(),
     p("1. A list of hotel reviews from booking.com includes 1,003 observations and 49 variables."),
     p("2. A list of hotel reviews from booking.com contains 20,491 observations and 2 variables."),
@@ -172,24 +174,46 @@ intro_panel <- tabPanel(
 
 # Define a variable `inter_vis_i` for your first page. 
 inter_vis_i <- tabPanel(
-  "Interactive visualization",
+  "Factors of Hotels",
   
-  titlePanel(""),
+  # A `titlePanel()` with the text "Income growth 1980-2014"
+  titlePanel("Hotel Reviews Factors"),
   
-  p("")
+  # A `sidebarLayout()` to create two columns.
+  # The sidebar layout will contain elements
   
+  
+  x_input, 
+  
+  y_input,
+  
+  color_input,
+  
+  size_input, 
+  
+  # Plot the output with the name "scatter" (defined in `app_server.R`)
+  plotlyOutput("scatter")
 )
-
 
 # Define a variable `inter_vis_ii` for your first page. 
 inter_vis_ii <- tabPanel(
-  "Interactive visualization",
+  "Zip Codes VS Hotels",
   
-  titlePanel(""),
+  # A `titlePanel()` with the text "Income growth 1980-2014"
+  titlePanel("Hotel Reviews"),
   
-  p("")
+  # A `sidebarLayout()` to create two columns.
+  # The sidebar layout will contain elements:
+  sidebarLayout(
+    sidebarPanel(
+      uiOutput("selectZipCode")
+    ),
+    mainPanel(
+      plotlyOutput("zipcodePlot"),
+      textOutput("sampleText")
+    )
+  )
 )
-
 
 # Define a variable `inter_vis_iii` for your first page. 
 inter_vis_iii <- tabPanel(
