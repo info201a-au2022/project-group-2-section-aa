@@ -6,7 +6,6 @@ library(ggplot2)
 library(tidyverse)
 library(shiny)
 
-<<<<<<< HEAD
 
 review_from_1000 <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotel%20Revires%20(1000%20hotels).csv")
 
@@ -65,6 +64,4 @@ server <- function(input, output) {
   })
 
 }
-=======
-#load dataset
->>>>>>> f8fd2c33aa01ec8122d88feb7b39f31bcda92dea
+

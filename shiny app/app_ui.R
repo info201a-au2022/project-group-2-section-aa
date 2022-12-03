@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 library(shiny)
 library(ggplot2)
 
@@ -107,7 +107,7 @@ ui <- navbarPage(
   third_page,
 )
 
-=======
+
 ###SERVER
 
 #packages
@@ -232,4 +232,4 @@ ui <- navbarPage(
   summary_panel,
   report_panel
 )
->>>>>>> f8fd2c33aa01ec8122d88feb7b39f31bcda92dea
+
