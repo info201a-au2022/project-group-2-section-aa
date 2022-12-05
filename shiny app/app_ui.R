@@ -45,23 +45,11 @@ size_input <- sliderInput(
   label = "Size of point", min = 1, max = 10, value = 5
 )
 
-<<<<<<< HEAD
+
 
 #ui.R
 
 
-
-
-#SERVER
-
-
-
-=======
-#ui.R
-
-
-
->>>>>>> a890fefac3f27f863255fc1553103772107c7648
 #packages
 library(dplyr)
 library(ggplot2)
@@ -78,11 +66,8 @@ intro_panel <- tabPanel(
   fluidPage(
     h1("3 Hotel Connoisseurs"),
     br(),
-<<<<<<< HEAD
-    img( src = "../docs/hotel.png"),
-=======
-    imageOutput("hotel.png"),
->>>>>>> 58b02f45344e6beb8f216b94748aec5bf80b44bd
+    img("", src = "https://image.freepik.com/free-vector/hotel-near-sea-ocean-resort-view-vector-illustration-flat-cartoon-hotel-building-beach-street-road-big-skyscrapers-town-landscape-font-view-cityscape-panorama_101884-679.jpg", height = 500, width = 1000),
+    #imageOutput("hotel.png"),
     br(),
     h3("Abstract:"),
     p("Our motivation for this project is to effectively and efficiently analyze hotel reviews from different booking sites and conclude how they affect hotels' future bookings. 
