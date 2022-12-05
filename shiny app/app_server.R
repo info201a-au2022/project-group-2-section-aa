@@ -8,11 +8,9 @@ library(shiny)
 library(plotly)
 
 
-review_from_1000 <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotel%20Revires%20(1000%20hotels).csv")
+review_from_1000 <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
 
-review_from_booking <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotels%20Reviews%20(booking.com).csv")
-
-hr_booking <-  read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotels%20Reviews%20(booking.com).csv")
+review_from_booking <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
 
 
 new_data <- review_from_booking %>%
@@ -20,8 +18,9 @@ new_data <- review_from_booking %>%
   group_by(name)%>%
   summarise(number_of_reviewers = max(Number.of.reviewers, na.rm= TRUE)) %>%
   arrange(desc(number_of_reviewers)) %>%
-  slice(1:15)
+  slice(1:30)
 
+View(new_data)
 
 server <- function(input, output) {
   
@@ -66,4 +65,7 @@ server <- function(input, output) {
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3e43cc6d087bdc9e20780453ab6cb07acbeb4232

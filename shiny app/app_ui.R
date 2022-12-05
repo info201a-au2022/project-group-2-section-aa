@@ -3,9 +3,9 @@ library(shiny)
 library(ggplot2)
 
 
-review_from_1000 <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotel%20Revires%20(1000%20hotels).csv")
+review_from_1000 <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
 
-review_from_booking <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotels%20Reviews%20(booking.com).csv")
+review_from_booking <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
 
 
 #inputs
@@ -45,7 +45,15 @@ size_input <- sliderInput(
   label = "Size of point", min = 1, max = 10, value = 5
 )
 
+<<<<<<< HEAD
 #ui.R
+=======
+
+
+
+#SERVER
+>>>>>>> 3e43cc6d087bdc9e20780453ab6cb07acbeb4232
+
 
 #packages
 library(dplyr)
