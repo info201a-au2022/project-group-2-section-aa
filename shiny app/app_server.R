@@ -20,7 +20,6 @@ new_data <- review_from_booking %>%
   arrange(desc(number_of_reviewers)) %>%
   slice(1:30)
 
-View(new_data)
 
 server <- function(input, output) {
   
