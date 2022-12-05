@@ -64,7 +64,4 @@ server <- function(input, output) {
 
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 3e43cc6d087bdc9e20780453ab6cb07acbeb4232
