@@ -158,9 +158,7 @@ inter_vis_ii <- tabPanel(
 # Define a variable `inter_vis_iii` for your first page. 
 inter_vis_iii <- tabPanel(
   "Interactive visualization",
-  
   titlePanel(""),
-  
   p("")
 )
 
