@@ -11,11 +11,11 @@ review_from_booking <- read.csv("~/Documents/info201/assignments/project-group-2
 #inputs
 unique(review_from_1000$province)
 
-select_x_values <- colnames(review_from_booking)[c(-1,-2)]
+select_x_values <- colnames(review_from_booking)[c(-1,-2,-3)]
 
-select_y_values <- colnames(review_from_booking)[c(-1,-2)]
+select_y_values <- colnames(review_from_booking)[c(-1,-2,-3)]
 
-select_country <- unique(review_from_booking$country)
+unique(review_from_1000$name)
 
 x_input <- selectInput(
   "x_var",
