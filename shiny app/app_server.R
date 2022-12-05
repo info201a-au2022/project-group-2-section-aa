@@ -6,6 +6,7 @@ library(ggplot2)
 library(tidyverse)
 library(shiny)
 library(plotly)
+library(maps)
 
 
 review_from_1000 <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
@@ -60,6 +61,12 @@ server <- function(input, output) {
                  color = input$color) +
       labs(x = input$x_var, y = input$y_var, title = title)
     p
+  })
+  
+  #4th page
+  
+  output$map <- renderPlotly({
+    
   })
 
 }

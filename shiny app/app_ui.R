@@ -91,8 +91,9 @@ intro_panel <- tabPanel(
     p("It's crucial that we analyze the correlations between overall hotel ratings and other rating factors. Not only will this reveal a possible pattern, but it will also help validate our findings and conclusion.
       A positive correlation indicate the positive effect that a specific rating factor can influence overall ratings. On the other hand, a negative corrrelation shows that a specific rating factor can have a negative effect on the overall rating"),
     br(),
-    strong("2. What is the distributions of reviews across various areas?"), 
-    p("By posing this question, people who are looking for a stay are able to find the best area or location to book their stays. Moreover, by looking at the interactive visualization, we can detect the most frequent area for booking and further analyze factors to maintain high reviews.
+    strong("2. What are the overall scores of hotels in categorized areas (that are filtered by zip codes)?"), 
+    p("By posing this question, people who are looking for a stay are able to find the best area or location to book their stays.
+      Moreover, by looking at the interactive visualization, we can detect the most frequent area for booking and further analyze whether some specific areas that have higher reviews.
       In addition to knowing the most frequent booking area, this visualization provides information on overall quality of the hotels in certain areas."),
     br(),
     strong("3. TO-DO?"),
@@ -178,7 +179,13 @@ summary_panel <- tabPanel(
   "Summary",
   
   titlePanel("Summary Takeaways"),
-  
+  h3("First Takeaway"),
+  p(""),
+  br(),
+  h3("Second Takeaway"),
+  p(""),
+  br(),
+  h3("Third Takeaway"),
   p("")
 )
 
