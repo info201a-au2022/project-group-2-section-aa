@@ -6,7 +6,11 @@ library(ggplot2)
 library(tidyverse)
 library(shiny)
 library(plotly)
+<<<<<<< HEAD
 library(ggrepel)
+=======
+library(maps)
+>>>>>>> 64b28e9893e224c653af3bb60fbd24e3751c0206
 
 
 review_from_1000 <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
@@ -29,7 +33,35 @@ new_data <- review_from_booking %>%
 
 server <- function(input, output) {
   
+<<<<<<< HEAD
   #1st page 
+=======
+  
+  #2nd page 
+  output$selectZipCode <-renderUI({
+    selectInput("ZipCode", "Choose a Zip Code:", choices = unique(review_from_booking$Zip.code))
+  })
+  
+  scatterPlot <- reactive({
+    plotData <- review_from_booking%>%
+      filter(Zip.code %in% input$ZipCode)
+    
+    ggplot(plotData, aes(x= name, y= Overall.score)) +
+      geom_bar(stat = "identity") +
+      coord_flip() +
+      scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
+      labs(x = "Number of Reviewers",
+           y= "Overall Score",
+           title = "Hotel Reviews")
+  })
+  
+  
+  output$zipcodePlot <- renderPlotly({
+    scatterPlot()
+  })    
+  
+  #3rd page 
+>>>>>>> 64b28e9893e224c653af3bb60fbd24e3751c0206
   output$scatter <- renderPlotly({
     
     # Store the title of the graph in a variable indicating the x/y variables
@@ -45,6 +77,7 @@ server <- function(input, output) {
     p
   })
   
+<<<<<<< HEAD
   #2nd page 
   output$selectZipCode <-renderUI({
     selectInput("ZipCode", "Choose a Zip Code:", choices = unique(review_from_booking$Zip.code))
@@ -72,6 +105,13 @@ server <- function(input, output) {
   })    
   
  
+=======
+  #4th page
+  
+  output$map <- renderPlotly({
+    
+  })
+>>>>>>> 64b28e9893e224c653af3bb60fbd24e3751c0206
 
 }
 

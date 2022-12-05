@@ -65,9 +65,10 @@ intro_panel <- tabPanel(
   
   fluidPage(
     h1("3 Hotel Connoisseurs"),
+    strong("Authors: Hui-Yi Kao, Michelle Wu, Nana Wang"),
+    br(),
     br(),
     img("", src = "https://image.freepik.com/free-vector/hotel-near-sea-ocean-resort-view-vector-illustration-flat-cartoon-hotel-building-beach-street-road-big-skyscrapers-town-landscape-font-view-cityscape-panorama_101884-679.jpg", height = 500, width = 1000),
-    #imageOutput("hotel.png"),
     br(),
     h3("Abstract:"),
     p("Our motivation for this project is to effectively and efficiently analyze hotel reviews from different booking sites and conclude how they affect hotels' future bookings. 
@@ -90,8 +91,9 @@ intro_panel <- tabPanel(
     p("It's crucial that we analyze the correlations between overall hotel ratings and other rating factors. Not only will this reveal a possible pattern, but it will also help validate our findings and conclusion.
       A positive correlation indicate the positive effect that a specific rating factor can influence overall ratings. On the other hand, a negative corrrelation shows that a specific rating factor can have a negative effect on the overall rating"),
     br(),
-    strong("2. What is the distributions of reviews across various areas?"), 
-    p("By posing this question, people who are looking for a stay are able to find the best area or location to book their stays. Moreover, by looking at the interactive visualization, we can detect the most frequent area for booking and further analyze factors to maintain high reviews.
+    strong("2. What are the overall scores of hotels in categorized areas (that are filtered by zip codes)?"), 
+    p("By posing this question, people who are looking for a stay are able to find the best area or location to book their stays.
+      Moreover, by looking at the interactive visualization, we can detect the most frequent area for booking and further analyze whether some specific areas that have higher reviews.
       In addition to knowing the most frequent booking area, this visualization provides information on overall quality of the hotels in certain areas."),
     br(),
     strong("3. TO-DO?"),
@@ -158,8 +160,9 @@ inter_vis_ii <- tabPanel(
       plotlyOutput("zipcodePlot"),
       textOutput("sampleText"),
       br(),
-      p("In this dot plot, the side bar allows us to select the zip code and find locations that have relative high level of ratings.
-        By selecting zip codes, we can find locations of hotels that have high ratings and conclude that hotels in such locations have higher qualities compared to others.")
+      p("In this bar plot, the side bar allows us to select the zip code and find locations that have relative high level of ratings.
+        By selecting zip codes, we can find locations of hotels with their names on the chart that have high ratings and conclude that hotels in such locations have higher qualities compared to others.
+        This chart helps people who need a stay to have a clear sense of what are some of the top ranked hotels in certain areas that they desire to stay for their travels.")
     )
   )
 )
@@ -176,13 +179,19 @@ summary_panel <- tabPanel(
   "Summary",
   
   titlePanel("Summary Takeaways"),
-  
+  h3("First Takeaway"),
+  p("Our first takeaway will focus on the first interactive scatterplot. As we can see in the scatter"),
+  br(),
+  h3("Second Takeaway"),
+  p(""),
+  br(),
+  h3("Third Takeaway"),
   p("")
 )
 
 # Define a variable `report_panel` for your first page. 
 report_panel <- tabPanel(
-  "Report Page",
+  "Report",
   
   titlePanel("Key Goals"),
   
