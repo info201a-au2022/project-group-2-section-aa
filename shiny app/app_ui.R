@@ -65,9 +65,10 @@ intro_panel <- tabPanel(
   
   fluidPage(
     h1("3 Hotel Connoisseurs"),
+    strong("Authors: Hui-Yi Kao, Michelle Wu, Nana Wang"),
+    br(),
     br(),
     img("", src = "https://image.freepik.com/free-vector/hotel-near-sea-ocean-resort-view-vector-illustration-flat-cartoon-hotel-building-beach-street-road-big-skyscrapers-town-landscape-font-view-cityscape-panorama_101884-679.jpg", height = 500, width = 1000),
-    #imageOutput("hotel.png"),
     br(),
     h3("Abstract:"),
     p("Our motivation for this project is to effectively and efficiently analyze hotel reviews from different booking sites and conclude how they affect hotels' future bookings. 
@@ -182,7 +183,7 @@ summary_panel <- tabPanel(
 
 # Define a variable `report_panel` for your first page. 
 report_panel <- tabPanel(
-  "Report Page",
+  "Report",
   
   titlePanel("Key Goals"),
   
