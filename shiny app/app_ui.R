@@ -3,9 +3,9 @@ library(shiny)
 library(ggplot2)
 
 
-review_from_1000 <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotel%20Revires%20(1000%20hotels).csv")
+review_from_1000 <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
 
-review_from_booking <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotels%20Reviews%20(booking.com).csv")
+review_from_booking <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
 
 
 #inputs
@@ -46,66 +46,6 @@ size_input <- sliderInput(
 )
 
 
-
-intro_page <- tabPanel(
-  "Introduction", 
-  h1("Final Project"), 
-  p("In this assignment, we are fousing on hotel reviews")
-)
-
-second_page <- tabPanel(
-  "Factors of Hotels",
-  
-  # A `titlePanel()` with the text "Income growth 1980-2014"
-  titlePanel("Hotel Reviews Factors"),
-  
-  # A `sidebarLayout()` to create two columns.
-  # The sidebar layout will contain elements
-  
-  
-  x_input, 
-  
-  y_input,
-  
-  color_input,
-  
-  size_input, 
-  
-  # Plot the output with the name "scatter" (defined in `app_server.R`)
-  plotlyOutput("scatter")
-)
-
-third_page <- tabPanel(
-  "Zip Codes VS Hotels",
-  
-  # A `titlePanel()` with the text "Income growth 1980-2014"
-  titlePanel("Hotel Reviews"),
-  
-  # A `sidebarLayout()` to create two columns.
-  # The sidebar layout will contain elements:
-  sidebarLayout(
-    sidebarPanel(
-      uiOutput("selectZipCode")
-    ),
-    mainPanel(
-      plotlyOutput("zipcodePlot"),
-      textOutput("sampleText")
-    )
-  )
-)
-
-
-
-
-  
-  
-
-ui <- navbarPage(
-  "Hotels",
-  intro_page,
-  second_page,
-  third_page,
-)
 
 
 #SERVER
