@@ -159,8 +159,9 @@ inter_vis_ii <- tabPanel(
       plotlyOutput("zipcodePlot"),
       textOutput("sampleText"),
       br(),
-      p("In this dot plot, the side bar allows us to select the zip code and find locations that have relative high level of ratings.
-        By selecting zip codes, we can find locations of hotels that have high ratings and conclude that hotels in such locations have higher qualities compared to others.")
+      p("In this bar plot, the side bar allows us to select the zip code and find locations that have relative high level of ratings.
+        By selecting zip codes, we can find locations of hotels with their names on the chart that have high ratings and conclude that hotels in such locations have higher qualities compared to others.
+        This chart helps people who need a stay to have a clear sense of what are some of the top ranked hotels in certain areas that they desire to stay for their travels.")
     )
   )
 )
