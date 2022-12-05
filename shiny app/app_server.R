@@ -34,8 +34,9 @@ server <- function(input, output) {
     plotData <- review_from_booking%>%
       filter(Zip.code %in% input$ZipCode)
     
-    ggplot(plotData, aes(x= Number.of.reviewers, y= Overall.score)) +
-      geom_point(aes(color = Zip.code)) +
+    ggplot(plotData, aes(x= name, y= Overall.score)) +
+      geom_bar(stat = "identity") +
+      coord_flip() +
       scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
       labs(x = "Number of Reviewers",
            y= "Overall Score",

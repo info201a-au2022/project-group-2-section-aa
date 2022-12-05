@@ -180,7 +180,7 @@ summary_panel <- tabPanel(
   
   titlePanel("Summary Takeaways"),
   h3("First Takeaway"),
-  p(""),
+  p("Our first takeaway will focus on the first interactive scatterplot. As we can see in the scatter"),
   br(),
   h3("Second Takeaway"),
   p(""),
