@@ -45,6 +45,7 @@ size_input <- sliderInput(
   label = "Size of point", min = 1, max = 10, value = 5
 )
 
+<<<<<<< HEAD
 
 #ui.R
 
@@ -55,6 +56,12 @@ size_input <- sliderInput(
 
 
 
+=======
+#ui.R
+
+
+
+>>>>>>> a890fefac3f27f863255fc1553103772107c7648
 #packages
 library(dplyr)
 library(ggplot2)
@@ -140,7 +147,7 @@ inter_vis_i <- tabPanel(
       plotlyOutput("scatter"),
       br(),
       p("In this scatterplot, we are able to select variables to analysis the correlations between all kinds of factors that may affect overall ratings.
-        ")
+        For example, when selecting the overall score and the cleanliness, we discover a strong positive correlation between these two variable, indicating that cleanliness is a major factor that impacts the overall score of a hotel.")
     )
   )
 )
@@ -160,7 +167,10 @@ inter_vis_ii <- tabPanel(
     ),
     mainPanel(
       plotlyOutput("zipcodePlot"),
-      textOutput("sampleText")
+      textOutput("sampleText"),
+      br(),
+      p("In this dot plot, the side bar allows us to select the zip code and find locations that have relative high level of ratings.
+        By selecting zip codes, we can find locations of hotels that have high ratings and conclude that hotels in such locations have higher qualities compared to others.")
     )
   )
 )
