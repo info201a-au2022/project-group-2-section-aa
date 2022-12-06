@@ -205,9 +205,18 @@ summary_panel <- tabPanel(
 report_panel <- tabPanel(
   "Report",
   
-  titlePanel("Key Goals"),
-  
-  p("")
+  titlePanel("Report Page"),
+  h3("Limitations"),
+  p("While we have access to several tools, there are still some limitations we must consider prior to the project. One limitation is restricted access to the datasets we are using. 
+    Though they already provide enough information for us to utilize in our project, we do not know how the creators gathered and analyzed the data. 
+    As a result, this may skew some of our results and make it harder to locate biases within the dataset. Another limitation we may encounter regards our domain of knowledge. 
+    Throughout the quarter, we have learned a variety of different skills when conducting data analysis; however, we are not professionally experienced, so some of our methodology and analyses may be flawed. 
+    Lastly, we must consider the sample size of our data. Our datasets are mainly limited to hotels in the United States. 
+    While this sample size is large enough for this project, some inforamtion is missing in our dataset, and therefore, we cannot cannot conclude that our data represents the whole target population."),
+  h3("References"),
+  p("1. Hotel Reviews. (2019, June 24). Kaggle. https://www.kaggle.com/datasets/datafiniti/hotel-reviews?select=7282_1.csv"),
+  p("2. Hotels Reviews (booking.com). (2022, October 22). Kaggle. https://www.kaggle.com/datasets/thedevastator/sentiment-analyses-of-city-hotels"),
+  p("3. Trip Advisor Hotel Reviews. (2020, September 30). Kaggle. https://www.kaggle.com/datasets/andrewmvd/trip-advisor-hotel-reviews")
 )
 
 #Define a ui variable
