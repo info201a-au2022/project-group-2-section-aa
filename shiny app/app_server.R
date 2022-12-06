@@ -6,7 +6,6 @@ library(ggplot2)
 library(tidyverse)
 library(shiny)
 library(plotly)
-#library(ggrepel)
 library(maps)
 
 
