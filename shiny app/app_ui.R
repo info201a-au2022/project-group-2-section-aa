@@ -1,6 +1,7 @@
 
 library(shiny)
 library(ggplot2)
+library(plotly)
 
 
 review_from_1000 <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")

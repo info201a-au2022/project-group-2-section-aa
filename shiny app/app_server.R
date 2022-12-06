@@ -6,7 +6,6 @@ library(ggplot2)
 library(tidyverse)
 library(shiny)
 library(plotly)
-#library(ggrepel)
 library(maps)
 
 
@@ -56,7 +55,7 @@ server <- function(input, output) {
     
     
     # Create ggplot scatter
-    p <- ggplot(review_from_booking) +
+    p <- ggplot(review_from_booking, aes(Name = name,x= input$x_var, y = input$y_var)) +
       geom_point(mapping = aes_string(x = input$x_var, y = input$y_var), 
                  size = input$size, 
                  color = input$color) +
