@@ -6,62 +6,24 @@ library(ggplot2)
 library(tidyverse)
 library(shiny)
 library(plotly)
-<<<<<<< HEAD
 library(ggrepel)
-=======
 library(maps)
->>>>>>> 64b28e9893e224c653af3bb60fbd24e3751c0206
+
 
 
 review_from_1000 <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
 
 review_from_booking <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
 
-reviews_more_than_500 <- review_from_booking %>%
-  group_by(name) %>%
-  summarise(number_of_reviewers = max(Number.of.reviewers, na.rm= TRUE)) %>%
-  filter(number_of_reviewers >= 500) 
-  
 
-new_data <- review_from_booking %>%
-  filter(Number.of.reviewers > 0) %>%
-  group_by(name)%>%
-  summarise(number_of_reviewers = max(Number.of.reviewers, na.rm= TRUE)) %>%
-  arrange(desc(number_of_reviewers)) %>%
-  slice(1:30)
+ 
 
 
 server <- function(input, output) {
   
-<<<<<<< HEAD
-  #1st page 
-=======
+
+  #1st visualization
   
-  #2nd page 
-  output$selectZipCode <-renderUI({
-    selectInput("ZipCode", "Choose a Zip Code:", choices = unique(review_from_booking$Zip.code))
-  })
-  
-  scatterPlot <- reactive({
-    plotData <- review_from_booking%>%
-      filter(Zip.code %in% input$ZipCode)
-    
-    ggplot(plotData, aes(x= name, y= Overall.score)) +
-      geom_bar(stat = "identity") +
-      coord_flip() +
-      scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
-      labs(x = "Number of Reviewers",
-           y= "Overall Score",
-           title = "Hotel Reviews")
-  })
-  
-  
-  output$zipcodePlot <- renderPlotly({
-    scatterPlot()
-  })    
-  
-  #3rd page 
->>>>>>> 64b28e9893e224c653af3bb60fbd24e3751c0206
   output$scatter <- renderPlotly({
     
     # Store the title of the graph in a variable indicating the x/y variables
@@ -76,27 +38,26 @@ server <- function(input, output) {
       labs(x = input$x_var, y = input$y_var, title = title)
     p
   })
+
   
-<<<<<<< HEAD
-  #2nd page 
+  #2nd visualization 
   output$selectZipCode <-renderUI({
     selectInput("ZipCode", "Choose a Zip Code:", choices = unique(review_from_booking$Zip.code))
   })
   
   scatterPlot <- reactive({
     plotData <- review_from_booking%>%
-      filter(Zip.code %in% input$ZipCode) 
+      filter(Zip.code %in% input$ZipCode) %>%
+      filter(Overall.score >0) %>%
+      filter(Number.of.reviewers >100)
     
-    ggplot(filter(plotData, Overall.score > 0), aes(x= name, y= Overall.score)) +
-    #ggplot(plotData, aes(x= name, y= Overall.score)) +
-      #geom_point(aes(color = Zip.code)) +
-      geom_bar(stat="identity")+
-      coord_flip()+
-      scale_x_discrete(guide = guide_axis(n.dodge=2)) +
-      #theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5))+
-      labs(x = "Hotel's Name",
+    ggplot(plotData, aes(x= name, y= Overall.score, reviews = Number.of.reviewers)) +
+      geom_bar(stat = "identity") +
+      coord_flip() +
+      scale_x_discrete(guide = guide_axis(n.dodge = 6)) +
+      labs(x = "Names of Hotels",
            y= "Overall Score",
-           title = "Hotel Reviews")
+           title = "Hotels VS Overall Score")
   })
   
   
@@ -104,14 +65,16 @@ server <- function(input, output) {
     scatterPlot()
   })    
   
+  
+
  
-=======
-  #4th page
+
+  #3rd visualization
   
   output$map <- renderPlotly({
     
   })
->>>>>>> 64b28e9893e224c653af3bb60fbd24e3751c0206
+
 
 }
 
