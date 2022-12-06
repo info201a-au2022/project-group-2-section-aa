@@ -38,7 +38,7 @@ server <- function(input, output) {
       geom_bar(stat = "identity") +
       coord_flip() +
       scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
-      labs(x = "Number of Reviewers",
+      labs(x = "Hotels' Name",
            y= "Overall Score",
            title = "Hotel Reviews")
   })

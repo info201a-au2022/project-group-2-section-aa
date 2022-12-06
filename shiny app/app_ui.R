@@ -180,10 +180,22 @@ summary_panel <- tabPanel(
   
   titlePanel("Summary Takeaways"),
   h3("First Takeaway"),
-  p("Our first takeaway will focus on the first interactive scatterplot. As we can see in the scatter"),
+  p("Our first takeaway will focus on the first interactive scatterplot. As we can see in the scatterplot, our group analyze the correlation between all possible factors that might affect the ratings."),
+  p("The following are the most significant findings of our datasets:"),
+  p("1. There is a positive and strong correlation between the overall scores and the cleanliness of hotels."),
+  p("2. There is also a positive correlation between the overall scores and the comfort of the hotels."),
+  p("3. There is also a positive correlation between the overall scores and the facilities of the hotels."),
+  p("4. There is also a positive correlation between the overall scores and the staff of the hotels."),
+  p("5. There is also a positive correlation between the overall scores and the price of the hotels."),
+  p("These five points are the variables that have high correlation with the overall scores of hotels in our datasets.
+    We conclude that these are factors that mainly affect the reviews of hotels. If hotels are aiming to have higher ratings, they should work on improving those services.
+    Moreover, we also discover some less important factors that do not have strong correlations with the hotel reviews, such as fitness center, private parking, etc."),
   br(),
   h3("Second Takeaway"),
-  p(""),
+  p("Our second takeaway will conclude the second interactive bar chart. The chart shows the overall score of hotels by their zip code."),
+  p("This chart helps the viewers get better grips on some highly ranked hotels if they have already decided areas they plan on staying.
+    Besides that, our group recognize some areas that have plenty of hotels that have good hospitality and reviews, including West Hollywood, Santa Monica, etc., 
+    and we find out that most hotels that have high reviews are mostly located in tourist areas."),
   br(),
   h3("Third Takeaway"),
   p("")
