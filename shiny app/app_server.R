@@ -6,7 +6,7 @@ library(ggplot2)
 library(tidyverse)
 library(shiny)
 library(plotly)
-library(ggrepel)
+#library(ggrepel)
 library(maps)
 
 
@@ -24,7 +24,6 @@ server <- function(input, output) {
 
   #1st visualization
   
-<<<<<<< HEAD
   #2nd page 
   output$selectZipCode <-renderUI({
     selectInput("ZipCode", "Choose a Zip Code:", choices = unique(review_from_booking$Zip.code))
@@ -49,8 +48,7 @@ server <- function(input, output) {
   })    
   
   #3rd page 
-=======
->>>>>>> 2911ea1bd4beefac2fbae370cbf33ff7511fc5a9
+
   output$scatter <- renderPlotly({
     
     # Store the title of the graph in a variable indicating the x/y variables
