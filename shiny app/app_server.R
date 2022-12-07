@@ -85,24 +85,20 @@ server <- function(input, output) {
     scatterPlot()
   })    
 
-  
+ 
   #3rd visualization
   output$selectRating <-renderUI({
     selectInput("reviews.rating", "Choose a Rating:", choices = unique(review_from_1000$reviews.rating))
   })
   
-  data <- reactive({
-    plotData <- review_from_1000 %>%
-      filter(!is.na(reviews.rating)) %>%
-      filter(reviews.rating %in% input$reviews.rating) %>%
-      filter(!is.na(latitude)) %>%
-      filter(!is.na(longitude))
+  plotData <- reactive({
+    review_from_1000 %>%
+      dplyr::filter(reviews.rating %in% input$reviews.rating)
   })
   
   output$map <- renderLeaflet({
-    map <- leaflet(plotData) %>%
+    map <- leaflet(data=plotData()) %>%
       addProviderTiles(providers$CartoDB.Positron) %>%
-      addMarkers(data=plotData)
+      addMarkers(data=plotData())
   })
 }
-
