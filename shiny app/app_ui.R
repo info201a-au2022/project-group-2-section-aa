@@ -1,12 +1,11 @@
-
 library(shiny)
 library(ggplot2)
 library(plotly)
 
 
-review_from_1000 <- read.csv("~/Documents/info201/projects/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
+review_from_1000 <- read.csv("../data/Hotel Revires (1000 hotels).csv")
 
-review_from_booking <- read.csv("~/Documents/info201/projects/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
+review_from_booking <- read.csv("../data/Hotels Reviews (booking.com).csv")
 
 #inputs
 unique(review_from_1000$province)

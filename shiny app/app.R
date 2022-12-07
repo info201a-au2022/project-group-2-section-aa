@@ -1,5 +1,13 @@
 # Load libraries so they are available
-library("shiny")
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+library(shiny)
+library(plotly)
+library(maps)
+library(leaflet)
+library(zipcodeR)
 
 # Use source() to execute the `app_ui.R` and `app_server.R` files. These will
 # define the UI value and server function respectively.

@@ -11,8 +11,8 @@ library(leaflet)
 library(zipcodeR)
 
 
-review_from_1000 <- read.csv("~/Documents/info201/projects/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
-review_from_booking <- read.csv("~/Documents/info201/projects/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
+review_from_1000 <- read.csv("../data/Hotel Revires (1000 hotels).csv")
+review_from_booking <- read.csv("../data/Hotels Reviews (booking.com).csv")
 
 server <- function(input, output) {
   
@@ -93,12 +93,11 @@ server <- function(input, output) {
   
   data <- reactive({
     plotData <- review_from_1000 %>%
+      filter(!is.na(reviews.rating)) %>%
       filter(reviews.rating %in% input$reviews.rating) %>%
       filter(!is.na(latitude)) %>%
-      filter(!is.na(longitude)) %>%
-      filter(!is.na(reviews.rating))
+      filter(!is.na(longitude))
   })
-  
   
   output$map <- renderLeaflet({
     map <- leaflet(plotData) %>%
