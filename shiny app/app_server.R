@@ -7,16 +7,12 @@ library(tidyverse)
 library(shiny)
 library(plotly)
 library(maps)
+library(leaflet)
+library(zipcodeR)
 
 
-
-review_from_1000 <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
-
-review_from_booking <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
-
-
- 
-
+review_from_1000 <- read.csv("~/Documents/info201/projects/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
+review_from_booking <- read.csv("~/Documents/info201/projects/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
 
 server <- function(input, output) {
   
@@ -47,7 +43,7 @@ server <- function(input, output) {
   })    
   
   #3rd page 
-
+  
   output$scatter <- renderPlotly({
     
     # Store the title of the graph in a variable indicating the x/y variables
@@ -62,7 +58,7 @@ server <- function(input, output) {
       labs(x = input$x_var, y = input$y_var, title = title)
     p
   })
-
+  
   
   #2nd visualization 
   output$selectZipCode <-renderUI({
@@ -88,18 +84,26 @@ server <- function(input, output) {
   output$zipcodePlot <- renderPlotly({
     scatterPlot()
   })    
-  
-  
 
- 
-
+  
   #3rd visualization
-  
-  output$map <- renderPlotly({
-    
+  output$selectRating <-renderUI({
+    selectInput("reviews.rating", "Choose a Rating:", choices = unique(review_from_1000$reviews.rating))
   })
-
-
+  
+  data <- reactive({
+    plotData <- review_from_1000 %>%
+      filter(reviews.rating %in% input$reviews.rating) %>%
+      filter(!is.na(latitude)) %>%
+      filter(!is.na(longitude)) %>%
+      filter(!is.na(reviews.rating))
+  })
+  
+  
+  output$map <- renderLeaflet({
+    map <- leaflet(plotData) %>%
+      addProviderTiles(providers$CartoDB.Positron) %>%
+      addMarkers(data=plotData)
+  })
 }
-
 

@@ -4,10 +4,9 @@ library(ggplot2)
 library(plotly)
 
 
-review_from_1000 <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
+review_from_1000 <- read.csv("~/Documents/info201/projects/project-group-2-section-aa/data/Hotel Revires (1000 hotels).csv")
 
-review_from_booking <- read.csv("~/Documents/info201/assignments/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
-
+review_from_booking <- read.csv("~/Documents/info201/projects/project-group-2-section-aa/data/Hotels Reviews (booking.com).csv")
 
 #inputs
 unique(review_from_1000$province)
@@ -97,8 +96,10 @@ intro_panel <- tabPanel(
       Moreover, by looking at the interactive visualization, we can detect the most frequent area for booking and further analyze whether some specific areas that have higher reviews.
       In addition to knowing the most frequent booking area, this visualization provides information on overall quality of the hotels in certain areas."),
     br(),
-    strong("3. TO-DO?"),
-    p(""),
+    strong("3. Is there a correlation between the highest-rated hotels and their locations and vice versa with the lowest-rated hotels and their locations?"),
+    p("This research question is important because it can reveal certain patterns and trends with hotel ratings and location. For people looking for a place to stay, location is often the first
+      and primary factor that is considered, since everyone prioritizes safety and efficiency when staying outside in a foreign place. By looking at the interactive map, we can deduce certain correlations
+      between the locations of the highest and lowest rated hotels."),
     br(),
     h3("Datasets:"), 
     p("We collected three hotel review datasets from kaggle.com. 
@@ -170,9 +171,19 @@ inter_vis_ii <- tabPanel(
 
 # Define a variable `inter_vis_iii` for your first page. 
 inter_vis_iii <- tabPanel(
-  "Interactive visualization",
-  titlePanel(""),
-  p("")
+  "Interactive Map Visualization",
+  titlePanel("Interactive Map of Hotel Ratings"),
+  sidebarLayout(
+    sidebarPanel(
+      uiOutput("selectRating")
+    ),
+    mainPanel(
+      leafletOutput("map"),
+      br(),
+      p("Based on the user's selection, this figure presents a map of hotels rated by the user. From this visualization, we can choose to display the highest-rated hotels, as well as the lowest-rated.
+        This can be especially useful in determining trends and correlations between the location of a hotel and its overall rating.")
+    )
+  )
 )
 
 # Define a variable `summary_panel` for your first page. 
@@ -199,7 +210,12 @@ summary_panel <- tabPanel(
     and we find out that most hotels that have high reviews are mostly located in tourist areas."),
   br(),
   h3("Third Takeaway"),
-  p("")
+  p("From the visualization on the interactive map page, we observed that the U.S. has the most 5-start rated hotels compared to any other country.
+    This visualization not only displays the locations of the highest-rated hotels, but it also provides insight as to why they're located where they are.
+    One possibility for the density of highly-rated hotels in the U.S. could be tourism, as the U.S. is one of the most visited places in the world.
+    It's also important to consider the implications of the dataset used however, as this density could also be caused by the majority of data collected
+    within the U.S."),
+  br(),
 )
 
 # Define a variable `report_panel` for your first page. 
