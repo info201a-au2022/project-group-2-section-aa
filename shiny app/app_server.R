@@ -88,12 +88,14 @@ server <- function(input, output) {
  
   #3rd visualization
   output$selectRating <-renderUI({
-    selectInput("reviews.rating", "Choose a Rating:", choices = unique(review_from_1000$reviews.rating))
+    selectInput("reviews.rating", "Choose a Rating:", list(1, 2, 3, 4, 5))
   })
   
   plotData <- reactive({
     review_from_1000 %>%
-      dplyr::filter(reviews.rating %in% input$reviews.rating)
+      dplyr::filter(reviews.rating %in% input$reviews.rating) %>%
+      filter(!is.na(longitude)) %>%
+      filter(!is.na(latitude))
   })
   
   output$map <- renderLeaflet({
