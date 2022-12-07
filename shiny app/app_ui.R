@@ -3,9 +3,14 @@ library(ggplot2)
 library(plotly)
 
 
-review_from_1000 <- read.csv("../data/Hotel Revires (1000 hotels).csv")
+#review_from_1000 <- read.csv("../data/Hotel Revires (1000 hotels).csv")
 
-review_from_booking <- read.csv("../data/Hotels Reviews (booking.com).csv")
+#review_from_booking <- read.csv("../data/Hotels Reviews (booking.com).csv")
+
+review_from_1000 <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotel%20Revires%20(1000%20hotels).csv")
+
+review_from_booking <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotels%20Reviews%20(booking.com).csv")
+
 
 #inputs
 unique(review_from_1000$province)
