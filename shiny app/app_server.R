@@ -11,8 +11,8 @@ library(leaflet)
 library(zipcodeR)
 
 
-review_from_1000 <- read.csv("../data/Hotel Revires (1000 hotels).csv")
-review_from_booking <- read.csv("../data/Hotels Reviews (booking.com).csv")
+# review_from_1000 <- read.csv("../data/Hotel Revires (1000 hotels).csv")
+# review_from_booking <- read.csv("../data/Hotels Reviews (booking.com).csv")
 
 server <- function(input, output) {
   

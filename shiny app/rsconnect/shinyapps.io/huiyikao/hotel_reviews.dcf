@@ -5,9 +5,9 @@ account: huiyikao
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7839460
-bundleId: 6605853
+bundleId: 6606303
 url: https://huiyikao.shinyapps.io/hotel_reviews/
-when: 1670434258.93588
-lastSyncTime: 1670434258.93591
+when: 1670439218.00244
+lastSyncTime: 1670439218.00246
 asMultiple: FALSE
 asStatic: FALSE
