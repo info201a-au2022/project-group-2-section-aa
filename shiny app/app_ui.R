@@ -4,8 +4,18 @@ library(plotly)
 
 
 #review_from_1000 <- read.csv("../data/Hotel Revires (1000 hotels).csv")
+<<<<<<< HEAD
 
 #review_from_booking <- read.csv("../data/Hotels Reviews (booking.com).csv")
+=======
+
+#review_from_booking <- read.csv("../data/Hotels Reviews (booking.com).csv")
+
+review_from_1000 <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotel%20Revires%20(1000%20hotels).csv")
+
+review_from_booking <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-2-section-aa/main/data/Hotels%20Reviews%20(booking.com).csv")
+
+>>>>>>> 0a0d2bed12ce6f2412e6212f398123c3e746b92c
 
 #inputs
 # unique(review_from_1000$province)
