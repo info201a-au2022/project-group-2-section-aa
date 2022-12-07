@@ -89,6 +89,17 @@ intro_panel <- tabPanel(
       As a result, we wanted to understand and analyze the accuracy of hotel reviews. In addition, we hope to discover different patterns of how highly-rated hotels operate their business. 
       By avoiding misleading reviews and discovering patterns that successful businesses have in common, this will help us better understand the system and algorithms behind booking websites and the influence they have on the stakeholders of this project."),
     br(),
+    h3("Problem Domain"),
+    p("Hotel ratings have become a prominent deciding factor in guest bookings. They not only provide insight on the hotel and its accommodations, but also provide hotel owners with feedback that heavily impacts their business. 
+      In this project, we hope to explore different factors that contribute to the overall ratings of hotels, which is later explained in our findings. In fact, data analytics in hospitality provide valuable insight on how to increase revenue, save costs, streamline hotel operations, and improve guest satisfaction [1]. 
+      The reviews left by guests based on their experience contribute to KPIs, which are one of the most considered factors in determining a hotel’s quality of stay. KPIs can include average ratings from reviews and surveys, departmental ratings, review or survey volume, and rankings from booking websites such as Booking.com [1]. 
+      Through our analysis of different factors that could potentially contribute to a hotel’s KPI such as cleanliness, staff, wifi, free parking, and such, we can extrapolate findings and differences between highly-rated hotels and their competitors. 
+      The use of hotel ratings to analyze a hotel’s quality is based on a data mining technique called sentiment mining. Sentiment mining, or opinion mining, is a technique that could extract emotions of a given text [2]. 
+      This technique is most commonly present in reviews, as they are based off individual guest experiences. We hope that our careful analysis of hotel reviews and the factors that contribute to them will be able to provide greater insight on how hotel reviews can impact a guest’s booking choice, as well as the impact they have on hospitality businesses."),
+    strong("References"),
+    p("[1] https://www.cloudbeds.com/articles/hotel-data-analytics/"),
+    p("[2] https://towardsdatascience.com/sentiment-analysis-for-hotel-reviews-3fa0c287d82e"),
+    br(),
     h3("Research Questions:"),
     strong("1. Is there a trend between overall hotel ratings and other rating factors (i.e. cleanliness, price, etc.)?"), 
     p("It's crucial that we analyze the correlations between overall hotel ratings and other rating factors. Not only will this reveal a possible pattern, but it will also help validate our findings and conclusion.
@@ -225,6 +236,11 @@ report_panel <- tabPanel(
   "Report",
   
   titlePanel("Report Page"),
+  br(),
+  p("Affiliation: INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"),
+  p("Date: Autumn 2022"),
+  p("Authors: Hui-Yi Kao, Michelle Wu, Nana Wang"),
+  p("Keywords: Hotel reviews, Rating spectrum, Accuracy, Quality of Stay"),
   h3("Limitations"),
   p("While we have access to several tools, there are still some limitations we must consider prior to the project. One limitation is restricted access to the datasets we are using. 
     Though they already provide enough information for us to utilize in our project, we do not know how the creators gathered and analyzed the data. 
@@ -232,6 +248,36 @@ report_panel <- tabPanel(
     Throughout the quarter, we have learned a variety of different skills when conducting data analysis; however, we are not professionally experienced, so some of our methodology and analyses may be flawed. 
     Lastly, we must consider the sample size of our data. Our datasets are mainly limited to hotels in the United States. 
     While this sample size is large enough for this project, some inforamtion is missing in our dataset, and therefore, we cannot cannot conclude that our data represents the whole target population."),
+  br(),
+  h3("Findings: Responses to Research Questions"),
+  strong("1. Is there a trend between overall hotel ratings and other rating factors (i.e. cleanliness, price, etc.)?"),
+  p("Cleanliness, comfort, facilities, staff and price are the variables that have high correlations with the overall scores of hotels in our datasets. 
+    If hotels are aiming to have higher ratings, they should work on improving those services. 
+    Moreover, we also discover some less important factors that do not have strong correlations with the hotel reviews, such as fitness centers, private parking, etc."),
+  strong("2. What are the overall scores of hotels in categorized areas (that are filtered by zip codes)?"),
+  p("In response to our research question #2, our interactive chart helps the viewers get better grips on some highly ranked hotels if they have already decided on areas they plan on staying. 
+    Besides that, our group recognizes some areas that have plenty of hotels that have good hospitality and reviews, and we find out that most hotels that have high reviews are mostly located in tourist areas."),
+  strong("3. Is there a correlation between the highest-rated hotels and their locations and vice versa with the lowest-rated hotels and their locations?"),
+  p("From the visualization on the interactive map page, we observed that the U.S. has the most 5-star rated hotels compared to any other country. 
+    This visualization not only displays the locations of the highest-rated hotels, but it also provides insight as to why they're located where they are. 
+    One possibility for the density of highly-rated hotels in the U.S. could be tourism; however, as this density could also be caused by the majority of data collected within the U.S."),
+  br(),
+  h3("Discussions"),
+  p("We found several patterns of hotels that have highly rated scores, which we believe our project may help future predictions of hotel ratings. 
+    Moreover, this report allows hotels to improve their performance based on our observations in our datasets. 
+    That being said, if hotels desire to improve their overall ratings and want to have more customers, our group suggests first working on improving the five factors, as mentioned in finding #1."),
+  p("Additionally, people who have not operated hotels but planning or have the desire to do so should consider operating in popular tourist areas. 
+    As concluded in our finding #2, those areas tend to have more reviews and higher ratings, and it is always a need to book a stay while traveling and touring. 
+    Therefore, it is profitable to have hotels open in some tourist areas."),
+  p("Last but not least, we observed that the U.S. has the most 5-star rated hotels compared to any other country; however, we detected that the majority of data are collected within the U.S., which bias may present in our conclusion. 
+    The implication of our third finding is that countries that are tourist-oriented will most likely have better hotel qualities, and people will have more options in selecting places for their stays."),
+  br(),
+  h3("Conclusion"),
+  p("Hotel reviews play a big role in helping people decide where to stay when traveling. It is by far one of the most important factors of consideration, hence, why we decided to analyze and provide interactive visualizations that accurately depict particular trends and correlations between what ultimately contributes to a hotel’s overall rating. 
+    Some factors that our visualizations allow us to analyze include but are not limited to hotel cleanliness, comfort, staff, free parking, and more. 
+    Oftentimes, the quality of a guest’s stay is determined by the availability of basic necessities, which is why such factors are important. We also placed emphasis on a hotel’s location, since safety, efficiency, and close proximity to the center of a city are also highly prioritized. 
+    We hope that the creation of our project allows users to more accurately determine where to stay the next time they go on vacation or just more precisely analyze the factors that contribute to the overall ratings of hotels around the world. "),
+  br(),
   h3("References"),
   p("1. Hotel Reviews. (2019, June 24). Kaggle. https://www.kaggle.com/datasets/datafiniti/hotel-reviews?select=7282_1.csv"),
   p("2. Hotels Reviews (booking.com). (2022, October 22). Kaggle. https://www.kaggle.com/datasets/thedevastator/sentiment-analyses-of-city-hotels"),
